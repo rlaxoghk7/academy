@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <script>
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+        window.location = 'microsoft-edge:' + window.location;
+        setTimeout(function() {
+            window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+        }, 1);
+    }
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta name="description" content="">
+
+  <!--네이버 검색등록 -->
+  <meta name="title" content="중앙직업전문학교">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="" />
+
+  <!-- 오픈그래프-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="중앙직업전문학교">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="/og.jpg">
+  <meta property="og:url" content="https://pbi.or.kr/">
+
+  <title>부산다우직업전문학교</title>
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+  <!-- js -->
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/form.js"></script>
+  <script src="./js/aos.js"></script>
+  <script src="./js/slick.js"></script>
+  <script src="./js/swiper.js"></script>
+  <script src="./js/jquery.fittext.js"></script>
+  <script src="./js/jquery.lettering.js"></script>
+  <script src="./js/jquery.textillate.js"></script>
+  <script src="./js/masonry.pkgd.min.js"></script>
+  <script src="./js/sly.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+	<script src="https://spi.maps.daum.net/imap/map_js_init/postcode.v2.js"></script><script src="/js/DaumPostcode.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+
+  <!-- js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.js" integrity="sha512-k2o1KZdvUi59PUXirfThShW9Gdwtk+jVYum6t7RmyCNAVyF9ozijFpvLEWmpgqkHuqSWpflsLf5+PEW6Lxy/wA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.css" integrity="sha512-wbWvHguVvzF+YVRdi8jOHFkXFpg7Pabs9NxwNJjEEOjiaEgjoLn6j5+rPzEqIwIroYUMxQTQahy+te87XQStuA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+</head>
+<body class="sub pc">
+  <!-- aos 실행 스크립트 -->
+    <script>
+        AOS.init();
+    </script>
+  <!-- progress bar -->
+    <div id="loading-prograss" class="loading-prograss blind">
+    	<div class="square">
+    	  <div class="spin"></div>
+    	</div>
+    </div>
+  <!-- /progress bar --> 
+
+  <!-- header -->
+  <header id="header" class="header">
+	  <div class="sitemap bg blind">
+      <div class="close">
+        <i class="xi-close"></i>
+      </div>
+    </div>
+    <script>
+      $(".close").on("click",function(){
+      $(".sitemap").addClass("blind");
+      })
+    </script>
+    <div class="util">
+			<div class="auto">
+				<div class="util_container">
+				  <ul class="out_links">
+				  	<li class="on" onclick="location.href='../../html/index/'">
+				  		<span>국민내일배움카드 교육상담 : 1899-5338</span>
+				  	</li>
+				  </ul>
+				  <div class="user_controls">
+				  	<a href="#" class="btn_login">
+				  		<span>로그인</span>
+				  	</a>
+						<a href="#" class="btn_login">
+				  		<span>아이디/비밀번호찾기</span>
+				  	</a>
+						<a href="#" class="btn_login">
+				  		<span>회원가입</span>
+				  	</a>
+						<a href="#" class="btn_login">
+				  		<span>인트라넷</span>
+				  	</a>
+				  	<a href="./process_now.html" class="btn_login">
+				  		<span>현재모집과정보기</span>
+				  	</a> 
+				  </div>
+				</div>
+			</div>
+		</div>
+    <div class="gnbWrap">
+      <div class="flex-wrap auto">
+        <h1 class="logo">
+          <a href="./index.html"><img src="./images/logo-main.jpg" alt=""></a>
+        </h1>
+        <nav id="gnb">
+          <div class="m-header"></div>
+          <ul class="gnbList">
+            <li>
+              <a class="depth01" href="./greeting.html" data-eng="">학교소개</a>
+                <div class="depth02-wrap">
+                  <ul class="depth02">
+                    <li>
+                      <a href="./greeting.html">인사말</a>
+                    </li>
+                    <li>
+                      <a href="./vision.html">비전 및 목표</a>
+                    </li>
+                    <li>
+                      <a href="./introduce.html">교직원소개</a>
+                    </li>
+                    <li>
+                      <a href="./orga.html">조직도</a>
+                    </li>
+                    <li>
+                      <a href="./history.html">연혁</a>
+                    </li>
+                    <li>
+                      <a href="./prof.html">시설안내</a>
+                    </li>
+                    <li>
+                      <a href="./location.html">오시는길</a>
+                    </li>
+                    <li>
+                      <a href="./news.html">학교소식</a>
+                    </li>
+                  </ul>
+                </div>
+            </li>
+            <li>
+              <a class="depth01" href="./process_now.html" data-eng="">모집교육</a>
+              <div class="depth02-wrap">
+                <ul class="depth02">
+                  <li>
+                    <a href="./process_now.html">현재모집중인과정</a>
+                  </li>
+                  <li>
+                    <a href="./process_ing.html">진행중인과정</a>
+                  </li>
+                  <li>
+                    <a href="./process_year.html">연간모집과정</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="depth01" href="./apply_online.html" data-eng="">입학신청</a>
+              <div class="depth02-wrap">
+                <ul class="depth02">
+                  <li>
+                    <a href="./apply_online.html">온라인접수</a>
+                  </li>
+                  <li>
+                    <a href="./apply_con.html">입학상담</a>
+                  </li>
+                  <li>
+                    <a href="./apply_qna.html">자주하는 질문</a>
+                  </li>
+                  <li>
+                    <a href="./apply_check.html">접수진행/합격확인</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="depth01" href="./edu_01.html" data-eng="">교육과정</a>
+              <div class="depth02-wrap">
+                <ul class="depth02">
+                  <li>
+                      <a href="./edu_01.html">3D기계설계</a>
+                  </li>
+                  <li>
+                    <a href="./edu_02.html">3D사출금형설계</a>
+                  </li>
+                  <li>
+                    <a href="./edu_03.html">3D모델링</a>
+                  </li>
+                  <li>
+                    <a href="./edu_04.html">머시닝 센터(CAM)</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="depth01" href="./job_01.html" data-eng="">취업정보</a>
+              <div class="depth02-wrap">
+                <ul class="depth02">
+                  <li>
+                    <a href="./job_01.html">기업체구인</a>
+                  </li>
+                  <li>
+                    <a href="./job_02.html">인재정보</a>
+                  </li>
+                  <li>
+                    <a href="./job_03.html">수료생 취업현황</a>
+                  </li>
+                  <li>
+                    <a href="./job_04.html">취업자료실</a>
+                  </li>
+                  <li>
+                    <a href="./job_05.html">취업가이드</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="depth01" href="./community_01.html" data-eng="">커뮤니티</a>
+              <div class="depth02-wrap">
+                <ul class="depth02">
+                  <li>
+                    <a href="./community_01.html">공지사항</a>
+                  </li>
+                  <li>
+                    <a href="./community_02.html">포트폴리오</a>
+                  </li>
+                  <li>
+                    <a href="./community_03.html">갤러리</a>
+                  </li>
+									<li>
+                    <a href="./community_04.html">온라인교육</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>  
+        </nav>
+        <div class="utilWrap">
+            <!-- <a href="../../html/member/login.php">
+              <img src="../../images/layout/login_icon.png" alt="">
+            </a>
+            <a href="../../html/member/join.php">
+              <img src="../../images/layout/member_icon.png" alt="">
+            </a> -->
+            <a href="javascript:void(0);" class="btnGnbAll sitemap-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+        </div>
+      </div>
+      <div class="red_bg"></div>
+    </div>
+    <div class="cover"></div>
+  </header>
+  <!-- //header -->
+  <div id="sub_visual">
+    <div class="auto">
+      <dl class="sub_visual_title">
+        <dt></dt>
+        <dd></dd>
+       </dl>
+    </div>
+  	<div class="sv_cover"></div>
+	  <div class="bg"></div>
+    <div id="lnb">
+		  <div class="subLnbWrap">
+			  <ul class="subLnb lnb-pc"></ul> <!-- 230517 클래스 추가 -->
+		  </div>
+	  </div>
+  </div>
+
+
+  <div class="auto">
+  <div class="breadCrumb_wrap">
+      <div class="home" onclick="location.href='/'">
+          <img src="../../images/contents/home_icon.png" alt="">
+      </div>
+      <div class="breadCrumb">
+      </div>
+      <div class="depth_arrow">
+          <i class="xi-angle-down-min"></i>
+      </div>
+  </div>
+  </div>
+  <div id="subContents">
+      <div class="sub_contents_tit"></div>
+      <div id="snb">
+      <ul></ul>
+    </div>
+      <div id="contents">
+  <div class="auto">
+
+  <div class="interior_wrap">
+    <div class="list">
+      <ul>
+        <li>
+          <div class="img">
+            <div class="img_box" style="background-image: url(./images/gallary1.jpg);" alt="1"></div>
+          </div>
+          <div class="txt">
+            <p>2025년 6월 사출금형산업기사 시험</p>
+            <span>2025-06-27</span>
+          </div>
+        </li>
+        <li>
+          <div class="img">
+            <div class="img_box" style="background-image: url(./images/gallary2.jpg);" alt="1"></div>
+          </div>
+          <div class="txt">
+            <p>101기 ,103기 폴리텍 대학교 현장 방문 </p>
+            <span>2025-03-25</span>
+          </div>
+        </li>
+        <li>
+          <div class="img">
+            <div class="img_box" style="background-image: url(./images/gallary3.jpg);" alt="1"></div>
+          </div>
+          <div class="txt">
+            <p>아동학대 예방 릴레이 캠페인</p>
+            <span>2024-09-19</span>
+          </div>
+        </li>
+        <li>
+          <div class="img">
+            <div class="img_box" style="background-image: url(./images/gallary4.jpg);" alt="1"></div>
+          </div>
+          <div class="txt">
+            <p>부산청년두배통장</p>
+            <span>2024-08-23</span>
+          </div>
+        </li>
+        <li>
+          <div class="img">
+            <div class="img_box" style="background-image: url(./images/gallary5.jpg);" alt="1"></div>
+          </div>
+          <div class="txt">
+            <p>한국산업인력공단 과정평가형 자격증 취득 우수기관 인증</p>
+            <span>2024-08-05</span>
+          </div>
+        </li>
+        <li>
+          <div class="img">
+            <div class="img_box" style="background-image: url(./images/gallary6.jpg);" alt="1"></div>
+          </div>
+          <div class="txt">
+            <p>과정평가형 우수과정 인증</p>
+            <span>2024-07-22</span>
+          </div>
+        </li>
+        <li>
+          <div class="img">
+            <div class="img_box" style="background-image: url(./images/gallary7.jpg);" alt="1"></div>
+          </div>
+          <div class="txt">
+            <p>사출금형사업기사 과정평가평 자겾증 100% 합격</p>
+            <span>2024-07-22</span>
+          </div>
+        </li>
+        <li>
+          <div class="img">
+            <div class="img_box" style="background-image: url(./images/gallary8.jpg);" alt="1"></div>
+          </div>
+          <div class="txt">
+            <p>모델링 경진 대회 실시</p>
+            <span>2024-07-19</span>
+          </div>
+        </li>
+        <li>
+          <div class="img">
+            <div class="img_box" style="background-image: url(./images/gallary9.jpg);" alt="1"></div>
+          </div>
+          <div class="txt">
+            <p>현장 체험 학습 다녀왔습니다</p>
+            <span>2024-07-17</span>
+          </div>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paging">
+        <a href='javascript:;' class='pager-prev'><i class='xi-angle-left-min'></i></a><div class='number'><a href='#' class='on'>1</a><a href='?search_item=&search_order=&search_category=&search_sort=&PageNumber=2'>2</a><a href='?search_item=&search_order=&search_category=&search_sort=&PageNumber=3'>3</a><a href='?search_item=&search_order=&search_category=&search_sort=&PageNumber=4'>4</a> </div><a href='?search_item=&search_order=&search_category=&search_sort=&PageNumber=2' class='pager-next'><i class='xi-angle-right-min'></i></a>		</div>
+      
+  </div>
+
+  </div>
+
+  </div>
+	</div>
+</div>
+
+
+</script>
+
+
+
+    <div id="footer"></div>
+    <script>
+      fetch("./inc/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.querySelector("#footer").innerHTML = html;
+
+          const script = document.createElement("script");
+          document.body.appendChild(script);
+        });
+    </script>
+
+
+<div id="footer"></div>
+    <script>
+      fetch("./inc/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.querySelector("#footer").innerHTML = html;
+
+          const script = document.createElement("script");
+          document.body.appendChild(script);
+        });
+    </script>
+
+</body>
+<div class="main-visual-tab pc">
+	<div class="auto">
+		<div class="grid-wrap">
+			<div class="grid-menu">
+				<div class="grid">
+					<a href="./apply_online.html"><span><img src="./images/1.png" alt=""></span><p>수강신청</p></a>	
+					<a href="./apply_qna.html"><span><img src="./images/2.png" alt=""></span><p>입학 Q&A</p></a>
+					<a href="./apply_con.html"><span><img src="./images/3.png" alt=""></span><p>간편문의</p></a>
+					<!-- <a href="#" target="_blank"><span><img src="./images/main-visual-tab-icon-04.png" alt=""></span>카톡 상담</a> -->
+				</div>
+				<div class="phone">
+					<p class="num">1899<br>5338</p>
+					<p class="day">09:00~18:00 토·일<br>공휴일 휴무</p>
+				</div>
+			</div>	
+			<a href="#" class="close">
+				<span class="material-symbols-outlined close-icon">close</span>	
+				<span class="material-symbols-outlined open-icon">menu_open</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(".main-visual-tab .close").on("click", function (e) {
+		e.preventDefault();
+  const $gridMenu = $(".main-visual-tab .grid-menu");
+  const $closeIcon = $(this).find(".close-icon");
+  const $openIcon = $(this).find(".open-icon");
+
+  if ($gridMenu.hasClass("slideOut")) {
+    $gridMenu.removeClass("slideOut");
+    $closeIcon.show();
+    $openIcon.hide();
+  } else {
+    $gridMenu.addClass("slideOut");
+    $closeIcon.hide();
+    $openIcon.show();
+  }
+});
+</script>
+
+</html>
+

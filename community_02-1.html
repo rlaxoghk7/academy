@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <script>
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+        window.location = 'microsoft-edge:' + window.location;
+        setTimeout(function() {
+            window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+        }, 1);
+    }
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta name="description" content="">
+
+  <!--네이버 검색등록 -->
+  <meta name="title" content="중앙직업전문학교">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="" />
+
+  <!-- 오픈그래프-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="중앙직업전문학교">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="/og.jpg">
+  <meta property="og:url" content="https://pbi.or.kr/">
+
+  <title>부산다우직업전문학교</title>
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+  <!-- js -->
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/form.js"></script>
+  <script src="./js/aos.js"></script>
+  <script src="./js/slick.js"></script>
+  <script src="./js/swiper.js"></script>
+  <script src="./js/jquery.fittext.js"></script>
+  <script src="./js/jquery.lettering.js"></script>
+  <script src="./js/jquery.textillate.js"></script>
+  <script src="./js/masonry.pkgd.min.js"></script>
+  <script src="./js/sly.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+	<script src="https://spi.maps.daum.net/imap/map_js_init/postcode.v2.js"></script><script src="/js/DaumPostcode.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/pf.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+
+  <!-- js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.js" integrity="sha512-k2o1KZdvUi59PUXirfThShW9Gdwtk+jVYum6t7RmyCNAVyF9ozijFpvLEWmpgqkHuqSWpflsLf5+PEW6Lxy/wA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.css" integrity="sha512-wbWvHguVvzF+YVRdi8jOHFkXFpg7Pabs9NxwNJjEEOjiaEgjoLn6j5+rPzEqIwIroYUMxQTQahy+te87XQStuA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+</head>
+<body class="sub pc">
+  <!-- aos 실행 스크립트 -->
+    <script>
+        AOS.init();
+    </script>
+  <!-- progress bar -->
+    <div id="loading-prograss" class="loading-prograss blind">
+    	<div class="square">
+    	  <div class="spin"></div>
+    	</div>
+    </div>
+  <!-- /progress bar --> 
+
+  <!-- Header -->
+  <header id="header" class="header">
+	  <div class="sitemap bg blind">
+      <div class="close">
+        <i class="xi-close"></i>
+      </div>
+    </div>
+    <script>
+      $(".close").on("click",function(){
+      $(".sitemap").addClass("blind");
+      })
+    </script>
+    <div class="util">
+			<div class="auto">
+				<div class="util_container">
+				  <ul class="out_links">
+				  	<li class="on" onclick="location.href='../../html/index/'">
+				  		<span>국민내일배움카드 교육상담 : 1899-5338</span>
+				  	</li>
+				  </ul>
+				  <div class="user_controls">
+				  	<a href="#" class="btn_login">
+				  		<span>로그인</span>
+				  	</a>
+						<a href="#" class="btn_login">
+				  		<span>아이디/비밀번호찾기</span>
+				  	</a>
+						<a href="#" class="btn_login">
+				  		<span>회원가입</span>
+				  	</a>
+						<a href="#" class="btn_login">
+				  		<span>인트라넷</span>
+				  	</a>
+				  	<a href="./process_now.html" class="btn_login">
+				  		<span>현재모집과정보기</span>
+				  	</a> 
+				  </div>
+				</div>
+			</div>
+		</div>
+    <div class="gnbWrap">
+      <div class="flex-wrap auto">
+        <h1 class="logo">
+          <a href="./index.html"><img src="./images/logo-main.jpg" alt=""></a>
+        </h1>
+        <nav id="gnb">
+          <div class="m-header"></div>
+          <ul class="gnbList">
+            <li>
+              <a class="depth01" href="./greeting.html" data-eng="">학교소개</a>
+                <div class="depth02-wrap">
+                  <ul class="depth02">
+                    <li>
+                      <a href="./greeting.html">인사말</a>
+                    </li>
+                    <li>
+                      <a href="./vision.html">비전 및 목표</a>
+                    </li>
+                    <li>
+                      <a href="./introduce.html">교직원소개</a>
+                    </li>
+                    <li>
+                      <a href="./orga.html">조직도</a>
+                    </li>
+                    <li>
+                      <a href="./history.html">연혁</a>
+                    </li>
+                    <li>
+                      <a href="./prof.html">시설안내</a>
+                    </li>
+                    <li>
+                      <a href="./location.html">오시는길</a>
+                    </li>
+                    <li>
+                      <a href="./news.html">학교소식</a>
+                    </li>
+                  </ul>
+                </div>
+            </li>
+            <li>
+              <a class="depth01" href="./process_now.html" data-eng="">모집교육</a>
+              <div class="depth02-wrap">
+                <ul class="depth02">
+                  <li>
+                    <a href="./process_now.html">현재모집중인과정</a>
+                  </li>
+                  <li>
+                    <a href="./process_ing.html">진행중인과정</a>
+                  </li>
+                  <li>
+                    <a href="./process_year.html">연간모집과정</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="depth01" href="./apply_online.html" data-eng="">입학신청</a>
+              <div class="depth02-wrap">
+                <ul class="depth02">
+                  <li>
+                    <a href="./apply_online.html">온라인접수</a>
+                  </li>
+                  <li>
+                    <a href="./apply_con.html">입학상담</a>
+                  </li>
+                  <li>
+                    <a href="./apply_qna.html">자주하는 질문</a>
+                  </li>
+                  <li>
+                    <a href="./apply_check.html">접수진행/합격확인</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="depth01" href="./edu_01.html" data-eng="">교육과정</a>
+              <div class="depth02-wrap">
+                <ul class="depth02">
+                  <li>
+                      <a href="./edu_01.html">3D기계설계</a>
+                  </li>
+                  <li>
+                    <a href="./edu_02.html">3D사출금형설계</a>
+                  </li>
+                  <li>
+                    <a href="./edu_03.html">3D모델링</a>
+                  </li>
+                  <li>
+                    <a href="./edu_04.html">머시닝 센터(CAM)</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="depth01" href="./job_01.html" data-eng="">취업정보</a>
+              <div class="depth02-wrap">
+                <ul class="depth02">
+                  <li>
+                    <a href="./job_01.html">기업체구인</a>
+                  </li>
+                  <li>
+                    <a href="./job_02.html">인재정보</a>
+                  </li>
+                  <li>
+                    <a href="./job_03.html">수료생 취업현황</a>
+                  </li>
+                  <li>
+                    <a href="./job_04.html">취업자료실</a>
+                  </li>
+                  <li>
+                    <a href="./job_05.html">취업가이드</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="depth01" href="./community_01.html" data-eng="">커뮤니티</a>
+              <div class="depth02-wrap">
+                <ul class="depth02">
+                  <li>
+                    <a href="./community_01.html">공지사항</a>
+                  </li>
+                  <li>
+                    <a href="./community_02.html">포트폴리오</a>
+                  </li>
+                  <li>
+                    <a href="./community_03.html">갤러리</a>
+                  </li>
+									<li>
+                    <a href="./community_04.html">온라인교육</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>  
+        </nav>
+        <div class="utilWrap">
+            <!-- <a href="../../html/member/login.php">
+              <img src="../../images/layout/login_icon.png" alt="">
+            </a>
+            <a href="../../html/member/join.php">
+              <img src="../../images/layout/member_icon.png" alt="">
+            </a> -->
+            <a href="javascript:void(0);" class="btnGnbAll sitemap-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+        </div>
+      </div>
+      <div class="red_bg"></div>
+    </div>
+    <div class="cover"></div>
+  </header>
+
+	<div id="sub_visual">
+    <div class="sub_visual">
+        <dl class="sub_visual_title">
+            <dt></dt>
+            <dd></dd>
+        </dl>
+    </div>
+	<div class="sv_cover"></div>
+	<div class="bg"></div>
+
+	<div id="lnb">
+		<div class="subLnbWrap">
+			<ul class="subLnb lnb-pc"></ul> <!-- 230517 클래스 추가 -->
+		</div>
+	</div>
+</div>
+  <!-- // Header // -->
+
+  <!-- Visual -->
+   
+
+  
+
+						<!-- <div class="item">
+							<div class="img">
+								<img src="/data/course/attach1_1687928560.jpg" alt="">
+							</div>
+							<div class="txt">
+								<div class="t01">미용사(메이크업)국가자격증 취득(실기)</div>
+								<dl>
+									<dt>기간 :</dt>
+									<dd>2025.08.12 ~ 2025.09.24</dd>
+								</dl>
+								<dl>
+									<dt>시간 :</dt>
+									<dd>09:30-17:30</dd>
+								</dl>
+							</div>
+							<div class="btn">
+																<a href="../process/process_view.php?idx=40" class="color-01">상세보기</a>
+								<a href="../process/process_write.php?idx=40" class="color-02">수강신청</a>
+															</div>
+						</div>
+						<div class="item">
+							<div class="img">
+								<img src="/data/course/attach1_1743562697.jpg" alt="">
+							</div>
+							<div class="txt">
+								<div class="t01">(오전)누구나 쉽게 그릴 수 있는 (모바일 캐릭터)이모티콘 제작</div>
+								<dl>
+									<dt>기간 :</dt>
+									<dd>2025.08.18 ~ 2025.09.08</dd>
+								</dl>
+								<dl>
+									<dt>시간 :</dt>
+									<dd>09:30-13:30</dd>
+								</dl>
+							</div>
+							<div class="btn">
+																<a href="../process/process_view.php?idx=111" class="color-01">상세보기</a>
+								<a href="../process/process_write.php?idx=111" class="color-02">수강신청</a>
+															</div>
+						</div>
+						<div class="item">
+							<div class="img">
+								<img src="/data/course/attach1_1731980751.jpg" alt="">
+							</div>
+							<div class="txt">
+								<div class="t01">(오전)GTQ1급 그래픽기술자격(포토샵,일러스트) 취득</div>
+								<dl>
+									<dt>기간 :</dt>
+									<dd>2025.08.18 ~ 2025.09.26</dd>
+								</dl>
+								<dl>
+									<dt>시간 :</dt>
+									<dd>09:30-13:30</dd>
+								</dl>
+							</div>
+							<div class="btn">
+																<a href="../process/process_view.php?idx=108" class="color-01">상세보기</a>
+								<a href="../process/process_write.php?idx=108" class="color-02">수강신청</a>
+															</div>
+						</div>
+						<div class="item">
+							<div class="img">
+								<img src="/data/course/attach1_1731979616.jpg" alt="">
+							</div>
+							<div class="txt">
+								<div class="t01">(오후)한번에 합격하는 컴퓨터활용능력2급취득(이론/실기)</div>
+								<dl>
+									<dt>기간 :</dt>
+									<dd>2025.08.18 ~ 2025.09.19</dd>
+								</dl>
+								<dl>
+									<dt>시간 :</dt>
+									<dd>14:00~18:00</dd>
+								</dl>
+							</div>
+							<div class="btn">
+																<a href="../process/process_view.php?idx=107" class="color-01">상세보기</a>
+								<a href="../process/process_write.php?idx=107" class="color-02">수강신청</a>
+															</div>
+						</div>
+						<div class="item">
+							<div class="img">
+								<img src="/data/course/attach1_1731980778.jpg" alt="">
+							</div>
+							<div class="txt">
+								<div class="t01">(오후)GTQ1급 그래픽기술자격(포토샵,일러스트) 취득</div>
+								<dl>
+									<dt>기간 :</dt>
+									<dd>2025.08.25 ~ 2025.09.26</dd>
+								</dl>
+								<dl>
+									<dt>시간 :</dt>
+									<dd>14:00-18:00</dd>
+								</dl>
+							</div>
+							<div class="btn">
+																<a href="../process/process_view.php?idx=109" class="color-01">상세보기</a>
+								<a href="../process/process_write.php?idx=109" class="color-02">수강신청</a>
+															</div>
+						</div> -->
+					</div>
+				</div>
+			</li>
+
+			<!-- con02 -->
+
+<script>
+	$(document).ready(function () {
+		tab();
+	})
+
+	function tab() {
+		//탭메뉴 클릭할 때 실행
+		$('.tab_wrap .tit_list > li a').on('click', function (e) {
+			e.preventDefault();
+
+			//초기화
+			$('.tab_wrap .tit_list > li').removeClass('active');
+			$('.tab_wrap .tab_list').hide();
+
+			//실행
+			$(this).parent().addClass('active');
+			var activeTab = $(this).attr('href');
+			$(activeTab).show();
+
+			//파라미터 확인
+			urlParam = location.search.substr(location.search.indexOf("?") + 1);
+			if (urlParam != '') {
+				urlParam = '?' + urlParam;
+			}
+
+			//파라미터 변경
+			getNewUrl('tabName', urlParam); //(변경·추가할 파라미터 이름, 현재 파라미터)
+			function getNewUrl(paramName, oldUrl) {
+				var newUrl;
+				var urlChk = new RegExp('[?&]' + paramName + '\\s*=');
+				var urlChk2 = new RegExp('(?:([?&])' + paramName + '\\s*=[^?&]*)')
+
+
+				if (urlChk.test(oldUrl)) { //해당 파라미터가 있을 때
+					newUrl = oldUrl.replace(urlChk2, "$1" + paramName + "=" + activeTab.substr(1));
+				} else if (/\?/.test(oldUrl)) { //해당 파라미터가 없고 다른 파라미터가 있을 때
+					newUrl = oldUrl + "&" + paramName + "=" + activeTab.substr(1);
+				} else { //파라미터가 없을 때
+					newUrl = oldUrl + "?" + paramName + "=" + activeTab.substr(1);
+				}
+
+				history.pushState(null, null, newUrl);
+			}
+		});
+
+		//파라미터 값 검사
+		function getParameter(name) {
+			name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+			var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+				results = regex.exec(location.search);
+			return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+		}
+
+		var getParam = getParameter('tabName'); //선택한 탭 파라미터
+		var loadChk = getParameter('loadChk'); //첫 로드 여부 체크
+
+		if (getParam != '') { //파라미터 값이 있으면 파라미터 값 기준으로 탭메뉴 선택
+			$('.tab_wrap .tit_list > li a[href="#' + getParam + '"]').parent().addClass('active');
+			$('.tab_wrap .tit_list > li a[href="#' + getParam + '"]').trigger('click');
+
+			if (loadChk == 'on') { //처음 로드되었으면 스크롤 이동
+				//탭 위치로 이동
+				var tabTop = $('.tab_wrap').offset().top;
+				$(window).scrollTop(tabTop - 100);
+
+				//파라미터 확인
+				var urlParam = location.search.substr(location.search.indexOf("?") + 1);
+				if (urlParam != '') {
+					urlParam = '?' + urlParam;
+				}
+
+				//loadChk 파라미터 값 변경
+				loadChange('loadChk', urlParam);
+				function loadChange(paramName, oldUrl) {
+					var newUrl;
+					var urlChk = new RegExp('[?&]' + paramName + '\\s*=');
+					var urlChk2 = new RegExp('(?:([?&])' + paramName + '\\s*=[^?&]*)')
+					newUrl = oldUrl.replace(urlChk2, "$1" + paramName + "=off");
+					history.pushState(null, null, newUrl);
+				}
+			}
+		} else { //파라미터 값이 없으면 active 클래스 기준으로 탭메뉴 선택
+			var activeChk = 0;
+			$('.tab_wrap .tit_list > li').each(function (i) {
+				if ($(this).hasClass('active')) {
+					$(this).addClass('active');
+					$(this).find('a').trigger('click');
+					activeChk++
+				}
+			});
+
+			//active 지정 안했을 시 첫 탭메뉴 선택
+			if (activeChk == 0) {
+				$('.tab_wrap .tit_list > li:first-child a').trigger('click');
+			}
+		}
+
+		//뒤로가기 탭메뉴 복구
+		window.onpopstate = function (event) {
+			//초기화
+			$('.tab_wrap .tit_list > li').removeClass('active');
+			$('.tab_wrap .tab_list').hide();
+			var getParam2 = getParameter('tabName'); //선택한 탭 파라미터
+
+			//탭메뉴 열기
+			if (getParam2 != '') {
+				$('.tab_wrap .tit_list > li a[href="#' + getParam2 + '"]').parent().addClass('active');
+				$('#' + getParam2).show()
+			} else {
+				$('.tab_wrap .tit_list > li:first-child').addClass('active');
+				$('.tab_wrap .tab_list:first-of-type').show();
+			}
+		};
+	}
+</script> 
+  <!--  // Content1 (교육과정) -->
+
+  <!-- Content2 (포트폴리오) -->
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포트폴리오 검색</title>
+  <style>
+  
+
+    
+
+    /* 검색 섹션 */
+    
+  </style>
+</head>
+<body>
+  
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포트폴리오 상세페이지</title>
+  <style>
+    /* 초기화 */
+ 
+    
+    /* 비디오 컨테이너 */
+    
+  </style>
+</head>
+<body>
+  
+  <div class="portfolio-container">
+    <div class="pf">포트폴리오</div>
+    <div class="info">
+    <div class="title">CAD/CAM를 활용한 3D모델링과 CNC(MCT)조작과 CAM가공 과정 포트폴리오</div>
+    <div class="info_2">
+    <div class="name">수강생: 조OO</div>
+    <div class="category">카테고리: 모델링, CNC밀링</div>
+    <div class="date">작성일: 2024-07-24 09:41:13</div>
+    
+    </div>
+    </div>
+    <!-- 유튜브 동영상 영역 -->
+    <div class="youtube-container">
+      <div class="youtube-placeholder" onclick="loadYouTubeVideo(this)">
+        <!-- YouTube 동영상 ID만 변경하면 됩니다 -->
+        <img class="youtube-thumbnail" 
+             src="./images/pf-2.jpg" 
+             alt="포트폴리오 동영상 썸네일"
+             >
+        <div class="play-button"></div>
+        <iframe class="youtube-iframe"
+                data-src="https://www.youtube.com/embed/wvtZMp_4M10" 
+                title="CAD/CAM를 활용한 3D모델링과 CNC(MCT)조작과 CAM가공 과정 포트폴리오" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              loading="lazy"></iframe>
+                
+                
+                
+      </div>
+    </div>
+    
+    <!-- 추가 이미지 갤러리 -->
+    
+  </div>
+
+  <script>
+    // YouTube 동영상 로드 함수
+    function loadYouTubeVideo(element) {
+      const placeholder = element;
+      const iframe = placeholder.querySelector('.youtube-iframe');
+      const thumbnail = placeholder.querySelector('.youtube-thumbnail');
+      
+      // iframe src 설정 (실제 로딩 시작)
+      iframe.src = iframe.dataset.src;
+      
+      // iframe 표시
+      iframe.style.display = 'block';
+      
+      // 썸네일과 플레이 버튼 숨기기
+      thumbnail.style.opacity = '0';
+      placeholder.querySelector('.play-button').style.opacity = '0';
+      
+      // 0.5초 후 완전히 제거
+      setTimeout(() => {
+        thumbnail.style.display = 'none';
+        placeholder.querySelector('.play-button').style.display = 'none';
+      }, 500);
+    }
+    
+    // 썸네일 갤러리 이미지 클릭 이벤트 (라이트박스 구현 예시)
+    document.querySelectorAll('.thumbnail-item').forEach(item => {
+      item.addEventListener('click', function() {
+        const imgSrc = this.querySelector('img').src;
+        alert('이미지 확대 기능을 구현하세요!\n' + imgSrc);
+        // 실제 구현시 SimpleLightbox 같은 라이브러리 사용 권장
+      });
+    });
+    
+    // 뷰포트 진입시 썸네일 미리 로드
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const container = entry.target;
+          const thumbnail = container.querySelector('.youtube-thumbnail');
+          const videoId = thumbnail.src.split('/vi/')[1].split('/')[0];
+          
+          // 고화질 썸네일 강제 로드
+          thumbnail.src = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+          
+          observer.unobserve(container);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('.youtube-container').forEach(container => {
+      observer.observe(container);
+    });
+  </script>
+
+  <div id="footer"></div>
+    <script>
+      fetch("./inc/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.querySelector("#footer").innerHTML = html;
+
+          const script = document.createElement("script");
+          document.body.appendChild(script);
+        });
+    </script>
+
+  <script>
+    // DOM 요소들
+    const searchInput = document.getElementById('portfolioSearch');
+    const searchBtn = document.getElementById('searchBtn');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioGrid = document.getElementById('portfolioGrid');
+    const resultsInfo = document.getElementById('resultsInfo');
+    const noResults = document.getElementById('noResults');
+    const loading = document.getElementById('loading');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    let currentFilter = 'all';
+
+    // 검색 기능
+    function performSearch() {
+      const searchTerm = searchInput.value.toLowerCase().trim();
+      
+      // 로딩 표시
+      showLoading();
+      
+      setTimeout(() => {
+        let visibleCount = 0;
+        
+        portfolioItems.forEach(item => {
+          const title = item.dataset.title.toLowerCase();
+          const student = item.dataset.student.toLowerCase();
+          const category = item.dataset.category.toLowerCase();
+          
+          const matchesSearch = searchTerm === '' || 
+            title.includes(searchTerm) || 
+            student.includes(searchTerm) || 
+            category.includes(searchTerm);
+          
+          const matchesFilter = currentFilter === 'all' || 
+            category.includes(currentFilter.toLowerCase());
+          
+          if (matchesSearch && matchesFilter) {
+            item.style.display = 'block';
+            visibleCount++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+        
+        // 결과 업데이트
+        updateResults(visibleCount, searchTerm);
+        hideLoading();
+      }, 300);
+    }
+
+    // 필터 기능
+    function applyFilter(filter) {
+      currentFilter = filter;
+      
+      // 필터 버튼 활성화 상태 변경
+      filterBtns.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.filter === filter) {
+          btn.classList.add('active');
+        }
+      });
+      
+      performSearch();
+    }
+
+    // 결과 업데이트
+    function updateResults(count, searchTerm) {
+      if (count === 0) {
+        portfolioGrid.style.display = 'none';
+        noResults.style.display = 'block';
+        resultsInfo.textContent = '검색 결과가 없습니다';
+      } else {
+        portfolioGrid.style.display = 'grid';
+        noResults.style.display = 'none';
+        
+        let resultText = `총 ${count}개의 포트폴리오`;
+        if (searchTerm) {
+          resultText += ` (검색어: "${searchTerm}")`;
+        }
+        if (currentFilter !== 'all') {
+          const filterName = document.querySelector(`[data-filter="${currentFilter}"]`).textContent;
+          resultText += ` (필터: ${filterName})`;
+        }
+        resultsInfo.textContent = resultText;
+      }
+    }
+
+    // 로딩 표시/숨김
+    function showLoading() {
+      loading.style.display = 'block';
+      portfolioGrid.style.opacity = '0.5';
+    }
+
+    function hideLoading() {
+      loading.style.display = 'none';
+      portfolioGrid.style.opacity = '1';
+    }
+
+    // 이벤트 리스너
+    searchInput.addEventListener('input', performSearch);
+    searchBtn.addEventListener('click', performSearch);
+
+    // Enter 키 검색
+    searchInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        performSearch();
+      }
+    });
+
+    // 필터 버튼 이벤트
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        applyFilter(this.dataset.filter);
+      });
+    });
+
+    // 포트폴리오 아이템 클릭 이벤트
+    portfolioItems.forEach(item => {
+      item.addEventListener('click', function() {
+        const title = this.dataset.title;
+        const student = this.dataset.student;
+        alert(`${title}\n수강생: ${student}`);
+        // 실제로는 상세 페이지로 이동하거나 모달을 열 수 있습니다
+      });
+    });
+
+    // 초기 로드
+    updateResults(portfolioItems.length, '');
+  </script>
+
+  
+</body>
+<div class="main-visual-tab pc">
+	<div class="auto">
+		<div class="grid-wrap">
+			<div class="grid-menu">
+				<div class="grid">
+					<a href="./apply_online.html"><span><img src="./images/1.png" alt=""></span><p>수강신청</p></a>	
+					<a href="./apply_qna.html"><span><img src="./images/2.png" alt=""></span><p>입학 Q&A</p></a>
+					<a href="./apply_con.html"><span><img src="./images/3.png" alt=""></span><p>간편문의</p></a>
+					<!-- <a href="#" target="_blank"><span><img src="./images/main-visual-tab-icon-04.png" alt=""></span>카톡 상담</a> -->
+				</div>
+				<div class="phone">
+					<p class="num">1899<br>5338</p>
+					<p class="day">09:00~18:00 토·일<br>공휴일 휴무</p>
+				</div>
+			</div>	
+			<a href="#" class="close">
+				<span class="material-symbols-outlined close-icon">close</span>	
+				<span class="material-symbols-outlined open-icon">menu_open</span>
+			</a>
+		</div>
+	</div>
+</div>
+<script>
+	$(".main-visual-tab .close").on("click", function (e) {
+		e.preventDefault();
+  const $gridMenu = $(".main-visual-tab .grid-menu");
+  const $closeIcon = $(this).find(".close-icon");
+  const $openIcon = $(this).find(".open-icon");
+
+  if ($gridMenu.hasClass("slideOut")) {
+    $gridMenu.removeClass("slideOut");
+    $closeIcon.show();
+    $openIcon.hide();
+  } else {
+    $gridMenu.addClass("slideOut");
+    $closeIcon.hide();
+    $openIcon.show();
+  }
+});
+</script>
+
+
+</html>

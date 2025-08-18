@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "xeicon";
+    src:url("../../fonts/xeicon.eot?v=2.2.0");
+    src:url("../../fonts/xeicon.eot?#iefix&v=2.2.0") format("embedded-opentype"),
+        url("../../fonts/xeicon.woff2?v=2.2.0") format("woff2"),
+        url("../../fonts/xeicon.woff?v=2.2.0") format("woff"),
+        url("../../fonts/xeicon.ttf?v=2.2.0") format("truetype"),
+        url("../../fonts/xeicon.svg?v=2.2.0#xeicon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+    

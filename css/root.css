@@ -1,0 +1,46 @@
+::selection{color:#fff; background:var(--color);}
+
+
+html{
+
+--color: #476ef3;
+--color-2: #ed1b71;
+
+--main-content-margin: 100px;
+--main-content-padding: 100px;
+
+/* 
+    --calendar-color-01: 학점은행제;
+    --calendar-color-02: 위탁과정;
+    --calendar-color-03: 행정;
+    --calendar-color-04: 휴일;
+    --calendar-color-05: 일반과정; 
+*/
+
+--calendar-color-01: #ffb402;
+--calendar-color-02: #855eae;
+--calendar-color-03: #0154a3;
+--calendar-color-04: #f61672;
+--calendar-color-05: #4bac3b;
+
+--receipt-coming:#43b620;
+--receipt-ing:#43b620;
+--receipt-end:#666666;
+--edu-ing:#666666;
+--open-coming:#999999;
+
+--eng:'Montserrat', sans-serif;
+
+}
+
+@media(max-width:768px){
+
+    html{
+    --main-content-margin: 40px;
+    --main-content-padding: 40px;
+    }
+    
+}
+
+
+

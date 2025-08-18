@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <script>
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+        window.location = 'microsoft-edge:' + window.location;
+        setTimeout(function() {
+            window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+        }, 1);
+    }
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta name="description" content="">
+
+  <!--네이버 검색등록 -->
+  <meta name="title" content="중앙직업전문학교">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="" />
+
+  <!-- 오픈그래프-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="중앙직업전문학교">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="/og.jpg">
+  <meta property="og:url" content="https://pbi.or.kr/">
+
+  <title>부산다우직업전문학교</title>
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+  <!-- js -->
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/form.js"></script>
+  <script src="./js/aos.js"></script>
+  <script src="./js/slick.js"></script>
+  <script src="./js/swiper.js"></script>
+  <script src="./js/jquery.fittext.js"></script>
+  <script src="./js/jquery.lettering.js"></script>
+  <script src="./js/jquery.textillate.js"></script>
+  <script src="./js/masonry.pkgd.min.js"></script>
+  <script src="./js/sly.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+	<script src="https://spi.maps.daum.net/imap/map_js_init/postcode.v2.js"></script><script src="/js/DaumPostcode.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+
+  <!-- js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.js" integrity="sha512-k2o1KZdvUi59PUXirfThShW9Gdwtk+jVYum6t7RmyCNAVyF9ozijFpvLEWmpgqkHuqSWpflsLf5+PEW6Lxy/wA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.css" integrity="sha512-wbWvHguVvzF+YVRdi8jOHFkXFpg7Pabs9NxwNJjEEOjiaEgjoLn6j5+rPzEqIwIroYUMxQTQahy+te87XQStuA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+</head>
+<body class="sub pc">
+  <!-- aos 실행 스크립트 -->
+    <script>
+        AOS.init();
+    </script>
+  <!-- progress bar -->
+    <div id="loading-prograss" class="loading-prograss blind">
+    	<div class="square">
+    	  <div class="spin"></div>
+    	</div>
+    </div>
+  <!-- /progress bar --> 
+
+  <!-- header -->
+  <header id="header" class="header">
+	  <div class="sitemap bg blind">
+      <div class="close">
+        <i class="xi-close"></i>
+      </div>
+    </div>
+    <script>
+      $(".close").on("click",function(){
+      $(".sitemap").addClass("blind");
+      })
+    </script>
+    <div class="util">
+			<div class="auto">
+				<div class="util_container">
+				  <ul class="out_links">
+				  	<li class="on" onclick="location.href='../../html/index/'">
+				  		<span>국민내일배움카드 교육상담 : 1899-5338</span>
+				  	</li>
+				  </ul>
+				  <div class="user_controls">
+				  	<a href="#" class="btn_login">
+				  		<span>로그인</span>
+				  	</a>
+						<a href="#" class="btn_login">
+				  		<span>아이디/비밀번호찾기</span>
+				  	</a>
+						<a href="#" class="btn_login">
+				  		<span>회원가입</span>
+				  	</a>
+						<a href="#" class="btn_login">
+				  		<span>인트라넷</span>
+				  	</a>
+				  	<a href="./process_now.html" class="btn_login">
+				  		<span>현재모집과정보기</span>
+				  	</a> 
+				  </div>
+				</div>
+			</div>
+		</div>
+    <div class="gnbWrap">
+      <div class="flex-wrap auto">
+        <h1 class="logo">
+          <a href="./index.html"><img src="./images/logo-main.jpg" alt=""></a>
+        </h1>
+        <nav id="gnb">
+          <div class="m-header"></div>
+          <ul class="gnbList">
+            <li>
+              <a class="depth01" href="./greeting.html" data-eng="">학교소개</a>
+                <div class="depth02-wrap">
+                  <ul class="depth02">
+                    <li>
+                      <a href="./greeting.html">인사말</a>
+                    </li>
+                    <li>
+                      <a href="./vision.html">비전 및 목표</a>
+                    </li>
+                    <li>
+                      <a href="./introduce.html">교직원소개</a>
+                    </li>
+                    <li>
+                      <a href="./orga.html">조직도</a>
+                    </li>
+                    <li>
+                      <a href="./history.html">연혁</a>
+                    </li>
+                    <li>
+                      <a href="./prof.html">시설안내</a>
+                    </li>
+                    <li>
+                      <a href="./location.html">오시는길</a>
+                    </li>
+                    <li>
+                      <a href="./news.html">학교소식</a>
+                    </li>
+                  </ul>
+                </div>
+            </li>
+            <li>
+              <a class="depth01" href="./process_now.html" data-eng="">모집교육</a>
+              <div class="depth02-wrap">
+                <ul class="depth02">
+                  <li>
+                    <a href="./process_now.html">현재모집중인과정</a>
+                  </li>
+                  <li>
+                    <a href="./process_ing.html">진행중인과정</a>
+                  </li>
+                  <li>
+                    <a href="./process_year.html">연간모집과정</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="depth01" href="./apply_online.html" data-eng="">입학신청</a>
+              <div class="depth02-wrap">
+                <ul class="depth02">
+                  <li>
+                    <a href="./apply_online.html">온라인접수</a>
+                  </li>
+                  <li>
+                    <a href="./apply_con.html">입학상담</a>
+                  </li>
+                  <li>
+                    <a href="./apply_qna.html">자주하는 질문</a>
+                  </li>
+                  <li>
+                    <a href="./apply_check.html">접수진행/합격확인</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="depth01" href="./edu_01.html" data-eng="">교육과정</a>
+              <div class="depth02-wrap">
+                <ul class="depth02">
+                  <li>
+                      <a href="./edu_01.html">3D기계설계</a>
+                  </li>
+                  <li>
+                    <a href="./edu_02.html">3D사출금형설계</a>
+                  </li>
+                  <li>
+                    <a href="./edu_03.html">3D모델링</a>
+                  </li>
+                  <li>
+                    <a href="./edu_04.html">머시닝 센터(CAM)</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="depth01" href="./job_01.html" data-eng="">취업정보</a>
+              <div class="depth02-wrap">
+                <ul class="depth02">
+                  <li>
+                    <a href="./job_01.html">기업체구인</a>
+                  </li>
+                  <li>
+                    <a href="./job_02.html">인재정보</a>
+                  </li>
+                  <li>
+                    <a href="./job_03.html">수료생 취업현황</a>
+                  </li>
+                  <li>
+                    <a href="./job_04.html">취업자료실</a>
+                  </li>
+                  <li>
+                    <a href="./job_05.html">취업가이드</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="depth01" href="./community_01.html" data-eng="">커뮤니티</a>
+              <div class="depth02-wrap">
+                <ul class="depth02">
+                  <li>
+                    <a href="./community_01.html">공지사항</a>
+                  </li>
+                  <li>
+                    <a href="./community_02.html">포트폴리오</a>
+                  </li>
+                  <li>
+                    <a href="./community_03.html">갤러리</a>
+                  </li>
+									<li>
+                    <a href="./community_04.html">온라인교육</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>  
+        </nav>
+        <div class="utilWrap">
+            <!-- <a href="../../html/member/login.php">
+              <img src="../../images/layout/login_icon.png" alt="">
+            </a>
+            <a href="../../html/member/join.php">
+              <img src="../../images/layout/member_icon.png" alt="">
+            </a> -->
+            <a href="javascript:void(0);" class="btnGnbAll sitemap-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+        </div>
+      </div>
+      <div class="red_bg"></div>
+    </div>
+    <div class="cover"></div>
+  </header>
+  <!-- //header -->
+  <div id="sub_visual">
+    <div class="auto">
+        <dl class="sub_visual_title">
+            <dt></dt>
+            <dd></dd>
+        </dl>
+    </div>
+	  <div class="sv_cover"></div>
+	  <div class="bg"></div>
+
+	  <div id="lnb">
+	  	<div class="subLnbWrap">
+	  		<ul class="subLnb lnb-pc"></ul> <!-- 230517 클래스 추가 -->
+	  	</div>
+	  </div>
+  </div>
+  <div class="auto">
+    <div class="breadCrumb_wrap">
+      <div class="home" onclick="location.href='/'">
+        <img src="./images/home_icon.png" alt="">
+      </div>
+      <div class="breadCrumb">
+      </div>
+      <div class="depth_arrow">
+        <i class="xi-angle-down-min"></i>
+      </div>
+    </div>
+  </div>
+  <div id="subContents">
+    <div class="sub_contents_tit"></div>
+    <div id="snb">
+		  <ul></ul>
+	  </div>
+    <div id="contents">
+      <div class="auto">
+        <form name="writeForm" id="writeForm" method="POST">
+        <input type="hidden" name="mode" value="process_write">
+        <input type="hidden" name="tb" value="application">
+        <input type="hidden" name="course_code" value="CA2986">
+        <!--input type="hidden" name="exam_no" value=""-->
+          <div class="cv-wrap">
+            <div class="cv-con04">
+              <div class="sub-content-title">지원사항</div>
+                <div class="">
+                  <table class="form">
+                    <colgroup>
+                      <col>
+                      <col>
+                      <col>
+						          <col>
+                    </colgroup>
+                    <thead></thead>
+                    <tbody>
+                      <tr>
+                        <th>과정명</th>
+                        <td class="tal">(산대특) 융합부품 금형 3D 모델링과 CNC(MCT)가공과 CAM 프로그램</td>
+                        <th>교육기간	</th>
+                        <td class="tal">2025. 08. 25 ~ 2026. 01. 08</td>
+                      </tr>
+						          <tr>
+                        <th>교육장소	</th>
+                        <td class="tal">다우직업전문학교</td>
+                        <th>비고	</th>
+                        <td class="tal"></td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+
+        <div class="cv-con04">
+          <div class="sub-content-title">지원자 관련사항</div>
+          <div class="">
+            <table class="form">
+              <colgroup>
+                <col>
+                <col>
+              </colgroup>
+              <thead></thead>
+              <tbody>
+                <tr>
+                  <th>성명 <span class="star">*</span></th>
+                  <td class="tal"><input type="text" name="name" class="max490">(이름은 필수 입력사항입니다. 실명을 기재해 주십시오)</td>
+                </tr>
+						    <tr>
+                  <th>생년월일 <span class="star">*</span></th>
+                  <td class="tal"><input type="text" name="birth" class="max490 onlynum" maxlength="6"> * 주민번호 앞 6자리를 입력하세요</td>
+                </tr>
+						    <tr>
+                  <th>성별 <span class="star">*</span></th>
+                  <td >
+								    <div class="st-content">
+								    	<div class="check-box"><input type="radio" name="gender" id="gender1" value="M">남자</div> 
+								    	<div class="check-box"><input type="radio" name="gender" id="gender2" value="F">여자</div> 
+								    </div>
+							    </td>
+                </tr>
+						    <tr>
+                  <th>주소 <span class="star">*</span></th>
+                  <td colspan="3"><input class="max490" type="text" name="postcode" id="postcode" placeholder="우편번호" onclick="execDaumPostcode();" readonly="">
+								    <a href="javascript:execDaumPostcode();" class="btn_confirm">주소 찾기</a>
+								    <input type="text" name="addr1" id="addr1" class="detail_location max680">
+								    <input type="text" name="addr2" id="addr2" class="detail_location max680">
+							    </td>
+                  </tr>
+						    <tr>
+                  <th>휴대폰 <span class="star">*</span></th>
+                  <td colspan="3">
+								    <div class="phone">
+								    	<select class="short" name="phone1" id="phone1">
+								    		<option value="">선택</option>
+								    		<option value="010" selected="">010</option>
+								    		<option value="011">011</option>
+								    		<option value="016">016</option>
+								    		<option value="017">017</option>
+								    		<option value="018">018</option>
+								    		<option value="019">019</option>
+								    		<option value="070">070</option>
+								    	</select>
+								      <div>-</div>
+								    	<input type="text" class="onlynum" name="phone2" maxlength="4">
+								    	<div>-</div>
+								    	<input type="text" class="onlynum" name="phone3" maxlength="4">
+								    </div>
+								    (면접시에 연락 가능한 휴대전화번호를 입력하여 주십시오)
+							    </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="cv-con04">
+          <div class="sub-content-title">학력&기타사항</div>
+          <div class="">
+            <table class="form">
+              <colgroup>
+                <col>
+                <col>
+              </colgroup>
+              <thead></thead>
+              <tbody>
+                <tr>
+                  <th>최종학력 </th>
+                  <td class="tal">
+						        <select name="final_academic" id="final_academic" class="max490"> 
+						        	<option value="99">기타</option>
+						        	<option value="22">고2</option>
+						        	<option value="23">고3</option>
+						        	<option value="5">고등학교 졸업</option>
+						        	<option value="4">대학(2,3년제) 졸업</option>
+						        	<option value="3">대학교 졸업</option>
+						        	<option value="1">대학원 졸업</option>
+						        </select>
+						      </td>
+                </tr>
+					      <tr>
+                  <th>내일배움카드 소지 유무 <span class="star">*</span></th>
+                  <td class="tal">
+							      <div class="st-content">
+							      	<div class="check-box"><input type="radio" name="card" id="card1" value="Y" checked="">소지</div> 
+							      	<div class="check-box"><input type="radio" name="card" id="card2" value="N">미소지</div> 
+							      </div>
+						      </td>
+                </tr>
+					      <tr>
+                  <th>접속매체  <span class="star">*</span></th>
+                  <td>
+							      <select name="route" id="route" class="max490">
+							      	<option value="F">인터넷</option>
+							      	<option value="D">고용센터</option>
+							      	<option value="E">기타</option>
+							      </select>
+						      </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+        <div class="register">
+          <div class="registerBox">
+              <h3>개인정보처리방침안내</h3>
+              <div class="scrollBox"><div class="privacy">
+                <div>
+                ◆ 개인정보 보호정책 : 중앙직업전문학교에서의 개인정보보호<br>
+                    <br>
+                    중앙직업전문학교(이하'본교')가 취급하는 모든 개인정보는 관련법령인 "공공기관의 개인정보 보호에 관한 법률" 에 근거하거나 정보주체 동의에 의하여 수집ㆍ보유 및 처리되고 있습니다. <br>
+                    <br>
+                    「공공기관의 개인정보보호에 관한 법률」, 「동법 시행령」, 「동법 시행규칙」은 이러한 개인정보의 취급에 대한 일반적 규범을 제시하고 있으며, 본교는 이러한 법령의 규정에 따라 수집ㆍ보유 및 처리하는 개인정보를 적절한 공공업무 수행과 이용자의 권익을 보호하기 위해 적법/적정하게 취급할 것입니다.<br> 
+                    <br>
+                    또한, 본교는 관련 법령에서 규정한 바에 따라 본교에서 보유하고 있는 개인정보에 대한 열람 청구권 및 정정청구권 등 이용자의 권익을 존중하며, 이용자는 이러한 법령상 권익의 침해 등에 대하여 행정심판법에서 정하는 바에 따라 행정심판을 청구할 수 있습니다.<br> 
+                    <br>
+                    본교의 개인정보보호방침은 다음과 같습니다.<br>
+                    <br>
+                    1.〈홈페이지 이용자의 개인정보 보호〉 : 본교에서 운영하는 여러 홈페이지에서 이용자의 개인정보 보호<br>
+                    2.〈컴퓨터에 의해 처리되는 개인정보 보호〉 : 소관업무를 수행하는데 필요한 개인정보 취급<br>
+                    <br>
+                    본교에서 운영하고 있는 웹사이트는 다음과 같으며, 이 방침은 별도의 설명이 없는 한 본교에서 운영하는 모든 웹사이트에 적용됨을 알려드립니다. <br>
+                    1) www.jac.ac.kr(중앙직업전문학교 홈페이지)<br>
+                    2) 그외에 본교에서 운영하고 있는 모든 홈페이지<br> 
+                    <br>
+                    ◆ 홈페이지 이용자의 개인정보 보호<br>
+                    <br>
+                    1. 자동으로 수집·저장되는 개인정보<br>
+                    (1) 이용자가 본교 홈페이지를 이용할 경우 다음의 정보는 자동적으로 수집ㆍ저장될 수 있습니다.<br> 
+                    가) 이용자의 인터넷서버 도메인과 우리 홈페이지를 방문할 때 거친 웹사이트의 주소<br>
+                    나) 이용자의 브라우저 종류 및 OS<br>
+                    다) 방문일시 등<br>
+                    (2) 위와 같이 자동 수집/저장되는 정보는 이용자 여러분에게 보다 나은 서비스를 제공하기 위해 홈페이지의 개선과 보완을 위한 통계분석, 이용자와 웹사이트간의 원활한 의사소통 등을 위해 이용되어질 수 있습니다.<br>
+                    (3) 다만, 법령의 규정에 따라 이러한 정보를 제출할 수 있음을 유념하시기 바랍니다.<br> 
+                    <br>
+                    2. 이메일 및 웹서식 등을 통한 수집 정보<br>
+                    (1) 이용자는 우편, 전화 또는 온라인 전자서식 등을 통한 전자적 방법을 통해 의사를 표시할 수 있습니다. 이러한 방법의 선택에 있어 몇 가지 유의사항을 알려드립니다.<br> 
+                    가) 여러분이 홈페이지에 기재한 사항은 다른 사람들이 조회 또는 열람할 수도 있습니다.<br> 
+                    나) 여러분이 기재한 사항은 관련 법규에 근거하여 필요한 다른 사람과 공유될 수 있으며, 관련법령의 시행과 정책개발의 자료로도 사용될 수 있습니다.<br>
+                    다) 또한, 이러한 정보는 타 부처와 공유되거나, 필요에 의하여 제공될 수도 있습니다.<br>
+                    라) 홈페이지 보안을 위해 관리적/기술적 노력을 하고 있으나, 만약의 침해사고 시 문제가 될 수 있는 민감한 정보의 기재는 피하여 주시기 바랍니다.<br>
+                    <br>
+                    3. 쿠키(Cookie)의 운용 및 활용<br>
+                    (1) 본교는 귀하의 정보를 수시로 저장하고 찾아내는 '쿠키(cookie)' 등을 운용합니다.<br>
+                    (2) 쿠키란 본교의 웹사이트를 운영하는데 이용되는 서버가 이용자의 브라우저에 보내는 아주 작은 텍스트 파일로서 귀하의 컴퓨터 하드디스크에 저장됩니다.<br> 
+                    (3) 본교는 다음과 같은 목적을 위해 쿠키를 사용합니다.<br> 
+                    가) 쿠키 등 사용 목적<br>
+                    ① 이용자가 학교에 접속한 후 로그인(log-in)하면 본교의 서버는 귀하의 브라우저에 있는 쿠키의 내용을 읽고, 이용자의 추가정보를 이용자의 컴퓨터에서 찾아 추가 입력 없이 개인화된 맞춤 서비스를 제공할 수 있습니다. 이용자는 쿠키 설치에 대한 선택권을 가지고 있습니다. 따라서, 이용자는 웹브라우저에서 옵션을 설정함으로써 모든 쿠키를 허용하거나, 쿠키가 저장될 때마다 확인을 거치거나, 아니면 모든 쿠키의 저장을 거부할 수도 있습니다.<br>
+                    나) 쿠키 설정 거부 방법<br>
+                    ① 예: 쿠키 설정을 거부하는 방법으로는 이용자가 사용하시는 웹 브라우저의 옵션을 선택함.<br>
+                    다) 설정방법 예(인터넷 익스플로어의 경우) : 웹 브라우저 상단의 도구 &gt;인터넷 옵션 &gt;개인정보<br> 
+                    라) 단, 이용자가 쿠키 설치를 거부하였을 경우 서비스 제공에 어려움이 있을 수 있습니다.<br>
+                    <br>
+                    4. 웹사이트에서 운영하는 보안조치<br>
+                    (1) 본교는 이용자들의 개인정보를 취급함에 있어 개인정보가 분실, 도난, 누출, 변조 또는 훼손되지 않도록 안전성 확보를 위하여 다음과 같은 기술 및 관리 대책을 강구하고 있습니다.<br>
+                    가) 백신프로그램을 이용하여 컴퓨터바이러스에 의한 피해를 방지하기 위한 조치를 취하고 있습니다.<br>
+                    나) 백신프로그램은 주기적으로 업데이트되며 갑작스런 바이러스가 출현할 경우, 백신이 나오는 즉시 이를 제공함으로써 개인정보가 침해되는 것을 방지하고 있습니다.<br>
+                    다) 해킹 등에 의해 이용자의 개인정보가 유출되는 것을 방지하기 위해, 외부로부터의 침입을 차단하는 장치를 이용 하고 있으며, 각 서버마다 침입탐지시스템을 설치하여 24시간 침입을 감시하고 있습니다.<br>
+                    라) 이용자의 개인정보는 비밀번호에 의해 철저히 보호되고 있습니다.<br>
+                    (2) 본교 학생 아이디의 비밀번호는 본인만이 알고 있으며, 개인정보의 확인 및 변경도 비밀번호를 알고 있는 학생에 의해서만 가능합니다.<br>
+                    <br>
+                    5. 링크 사이트<br>
+                    (1) 홈페이지의 보안 또는 지속적인 서비스를 위해, 본교는 네트워크 트래픽의 통제(Monitor)는 물론 불법적으로 정보를 변경하는 등의 시도를 탐지하기 위해 여러 가지 프로그램을 운영하고 있습니다.<br>
+                    (2) 본교가 운영하는 여러 웹페이지에 포함된 링크 또는 배너를 클릭하여 다른 사이트 또는 웹페이지로 옮겨갈 경우, 그 사이트 운영기관이 제시한 개인정보 보호(취급)방침이 적용되므로 새로 방문한 사이트의 방침을 확인하시기 바랍니다.<br>
+                    <br>
+                    6. 웹사이트 이용 중 다른 사람의 개인정보 취득<br>
+                    (1) 본교에서 운영하는 웹 사이트에서 이메일 주소 등 식별할 수 있는 개인정보를 취득하여서는 아니 됩니다. 사위(詐僞) 기타 부정한 방법으로 이러한 개인정보를 열람 또는 제공받은 자는 「공공기관의 개인정보보호에 관한 법률」 제23조의 규정에 의하여 처벌을 받을 수 있습니다.<br>
+                    <br>
+                    ◆ 컴퓨터에 의해 처리되는 개인정보<br>
+                    <br>
+                    1. 개인정보의 수집<br>
+                    (1) 본교는 법령의 규정과 정보주체의 동의에 의해서만 개인정보를 수집·보유합니다.(2) 정보주체의 동의 후 수집하는 항목은 다음과 같습니다.<br>
+                    - 성명, 사진, 연락처, 주소지 등 지원서 작성에 필요한 기반사항 일체<br>
+                    (3) 개인정보 수집방법 : 홈페이지(지원서 작성)<br>
+                    (4) 본교는 만14세 미만의 아동으로부터 개인정보를 수집하고 있지 않습니다.<br>
+                    (5) 본교는 보유하고 있는 정보주체의 개인정보를 관계법령에 따라 적합하고 적정하게 처리하여 권익이 침해 받지 않도록 노력할 것입니다.<br>
+                    <br>
+                    2. 개인정보 이용 목적<br>
+                    (1) 본교는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br>
+                    (2) 정보주체의 동의 후 수집하는 항목은 다음과 같습니다.<br>
+                    가) 본교는 사용자에게 최대한의 교육서비스를 제공하기 위해 회원제 서비스 이용에 따른 사용자의 본인 확인, 불량회원의 부정 이용 방지와 비인가 사용 방지, 본교 고지사항의 전달, 본인의 의사확인, 불만처리, 학생선발 및 학적관리를 위해 활용하고 있으며 목적 이외의 용도로는 사용하지 않습니다.<br>
+                    <br>
+                    3. 개인정보의 보유 및 기간<br>
+                    (1) 원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 본교는 관계법령에서 정한 일정한 기간 동안 회원정보를 보관합니다.<br>
+                    가) 법령의 규정에 근거하여 수집/보유 중인 개인정보 파일<br>
+                    <br>
+                          <table width="100%" border="1" bordercolor="#CCCCCC" cellspacing="0" cellpadding="0">
+                            <tbody><tr align="center">
+                              <td bgcolor="#f2f2f2">개인정보화일명</td>
+                              <td bgcolor="#f2f2f2">근거</td>
+                              <td bgcolor="#f2f2f2">목적</td>
+                              <td bgcolor="#f2f2f2">주요항목</td>
+                              <td bgcolor="#f2f2f2">보유기간</td>
+                              <td bgcolor="#f2f2f2">비 고</td>
+                            </tr>
+                            <tr align="center">
+                              <td rowspan="2">졸업생DB</td>
+                              <td rowspan="2">교육기본법
+                              </td><td>증명발급</td>
+                              <td rowspan="2">성명, 주민번호,성적, 상벌</td>
+                              <td rowspan="2">영구</td>
+                              <td rowspan="2">&nbsp;</td>
+                            </tr>
+                            <tr align="center">
+                              <td>학사관리 및 증명발급</td>
+                            </tr>
+                            <tr align="center">
+                              <td>입시자료DB</td>
+                              <td>교육부지침</td>
+                              <td>대학입학전형</td>
+                              <td>성명, 주민번호</td>
+                              <td>4년</td>
+                              <td>&nbsp;</td>
+                            </tr>
+                          </tbody></table>
+                    <br>
+                    나) 정보주체의 동의하에 보유하고 있는 개인정보 파일<br>
+                    <br>
+                          <table width="100%" border="1" bordercolor="#CCCCCC" cellspacing="0" cellpadding="0">
+                            <tbody><tr align="center">
+                              <td bgcolor="#f2f2f2">개인정보화일명</td>
+                              <td bgcolor="#f2f2f2">근거</td>
+                              <td bgcolor="#f2f2f2">목적</td>
+                              <td bgcolor="#f2f2f2">주요항목</td>
+                              <td bgcolor="#f2f2f2">보유기간</td>
+                              <td bgcolor="#f2f2f2">비 고</td>
+                            </tr>
+                            <tr align="center">
+                              <td>졸업생DB</td>
+                              <td rowspan="2">교육기본법</td>
+                              <td>증명발급</td>
+                              <td rowspan="2">주소, 전화번호</td>
+                              <td rowspan="2">영구</td>
+                              <td rowspan="2">&nbsp;</td>
+                            </tr>
+                            <tr align="center">
+                              <td>재학생DB</td>
+                              <td>학사관리 및 증명발급</td>
+                            </tr>
+                          </tbody></table>
+                    <br>
+                    4. 개인정보의 공유 및 제공<br>
+                    (1) 본교는 이용자의 개인정보를 원칙적으로 외부에 제공하지 않습니다. 다만, 아래의 경우에는 예외로 합니다.<br>
+                    가) 법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우 "공공기관의 개인정보보호에 관한 법률" 제10조(이용 및 제공의 제한)의 규정에 따라 제공하는 경우<br>
+                    나) 다른 법률에 의해 보유기관 내부에서 이용하거나 보유기관이 외의 자에게 제공하는 경우<br>
+                    다) 정보주체의 동의가 있거나 또는 정보주체에게 제공하는 경우<br>
+                    라) 다른 법률에서 정하는 소관업무를 수행하기 위해 당해 처리정보를 이용할 상당한 이유가 있는 경우<br>
+                    마) 조약 기타 국제협정의 이행을 위해 외국정부 또는 국제기구에 제공하는 경우<br>
+                    바) 통계작성 및 학술연구 등의 목적을 위해 특정개인을 식별할 수 없는 형태로 제공하는 경우<br>
+                    사) 정보주체 또는 그 법정대리인이 의사표시를 할 수 없는 상태로 놓여 있거나 주소불명 등으로 동의를 할 수 없는 경우로써 정보주체 외의 자에게 제공하는 것이 명백히 정보주체에게 이익이 된다고 인정되는 경우<br>
+                    아) 범죄의 수사와 공소의 제기 및 유지에 필요한 경우<br>
+                    자) 법원의 재판업무수행을 위하여 필요한 경우<br>
+                    차) 기타 대통령령이 정하는 특별한 사유가 있는 경우<br>
+                    (2) 단, 위의 경우라 하더라도 본인 또는 제3자의 권익을 부당하게 침해할 우려가 있다고 인정되는 때에는 개인정보를 공개하지 않습니다.<br>
+                    <br>
+                    5. 수집한 개인 정보의 위탁 본교는 이용자의 동의 없이 이용자의 정보를 외부 업체에 위탁하지 않습니다. 향후 그러한 필요가 생길 경우, 위탁 대상자와 위탁 업무 내용에 대해 이용자에게 통지하고 필요한 경우 사전 동의를 받도록 하겠습니다.<br>
+                    <br>
+                    6. 개인정보파일의 열람 및 정정 청구<br>
+                    (1) 이용자는 언제든지 등록되어 있는 자신의 개인정보를 조회하거나 수정할 수 있습니다. 개인정보 조회, 수정을 위해서는 홈페이지의 내정보를 클릭하여 직접 열람, 정정이 가능합니다. 혹은 개인정보관리책임자에게 서면, 전화 또는 이메일로 가능합니다.<br>
+                    (2) 열람 청구<br>
+                    가) 사용자는 언제든지 본교 홈페이지를 이용하여 등록되어 있는 자신의 개인정보를 조회하거나 수정할 수 있으며, 학사관리에 꼭 필요한 정보를 제외하고는 사용자 자신이 개인정보를 삭제할 수 있습니다.<br>
+                    나) 청구절차<br>
+                    ① 서식에 따라 보유기관에게 청구(정보주체)<br>
+                    ② 보유기관은 5일 이내에 결정 통지서 청구인에게 송부<br>
+                    ③ 보유기관의 정정결정 완료되면 청구 접수후 10일 이내 열람시행<br>
+                    다) 공개법 제13조 규정에 의하여 열람을 제한할 수 있습니다.<br>
+                    ① 다음 사항에 해당하는 업무로서 당해 업무의 수행에 중대한 지장을 초래하는 경우 열람을 제한 할 수 있습니다.<br>
+                    i. 조세의 부과/징수 또는 환급에 관한 사항<br>
+                    ii. 교육법에 의한 각종 학교에서의 성적의 평가 또는 입학자의 선발에 관한 업무<br>
+                    iii. 학력, 기능 및 채용에 관한 시험, 자격의 검사, 보상급/급부금의 산정 등 평가 또는 판단에 관한 업무<br>
+                    iv. 다른 법률에 의한 감사 및 조사에 관한 업무<br>
+                    v. 기타 대통령령이 정하는 업무<br>
+                    ② 개인의 생명/신체를 해할 우려가 있거나 개인의 재산과 기타 이익을 부당하게 침해할 우려가 있는 경우<br>
+                    (3) 정정 청구<br>
+                    가) 개인정보의 오류에 대한 정정을 요청하신 경우 신속하게 정정하며, 정정 완료 이전에는 개인정보를 이용 또는 공유하지 않겠습니다. 또한 잘못된 개인정보를 제3자에게 이미 제공한 경우에는 정정 처리결과를 제3자에게 지체 없이 통지하여 정정이 이루어지도록 하겠습니다<br>
+                    나) 본인의 개인정보를 열람한 정보주체는 다음의 경우 정정을 청구할 수 있습니다.<br>
+                    ① 사실과 다르게 기록된 정보의 정정<br>
+                    ② 특정항목에 해당사실이 없는 내용에 대한 삭제<br>
+                    다) 청구 절차<br>
+                    ① 서식에 따라 보유기관에게 청구(정보주체)<br>
+                    ② 보유기관은 5일이내에 결정 통지서 청구인에게 송부<br>
+                    ③ 보유기관의 정정결정 완료되면 청구접수후 10일이내 열람시행<br>
+                    <br>
+                    <br>
+                    (4) 개인정보파일의 열람장소 및 정정 청구지는 개인정보파일별 담당 보유기관(팀)으로 지정 운영하고 있습니다.<br>
+                    <br>
+                          <table width="100%" border="1" bordercolor="#CCCCCC" cellspacing="0" cellpadding="0">
+                            <tbody><tr align="center">
+                              <td bgcolor="#f2f2f2">구분</td>
+                              <td bgcolor="#f2f2f2">위치</td>
+                              <td bgcolor="#f2f2f2">연락처</td>
+                            </tr>
+                            <tr align="center">
+                              <td>학사관리정보</td>
+                              <td>교육지원과</td>
+                              <td>02-560-0171</td>
+                            </tr>
+                          </tbody></table>
+                    <br>
+                    (5) 권익침해 구제([공공기관의 개인정보보호에 관한 법률]의 경우) 가) 열람청구 절차[공공기관의 개인정보보호에 관한 법률] 제12조(처리정보의 열람) 제1항 및 제14조제1항 (처리정보의 정정)의 규정에 의한 청구에 대하여 공공기관의 장이 행한 처분 또는 부작위로 인하여 권리 또는 이익이 침해를 받은 자는 행정심판법이 정하는 바에 따라 행정심판을 청구할 수 있습니다.<br> 
+                    나) 구제 절차<br>
+                    ① 침해신고 접수 : 해당기관 웹사이트 또는 방문 접수<br>
+                    ② 침해사실 조사 : 침해여부 확인, 침해기관 방문 및 서면 조사<br>
+                    ③ 처리 : 처리 및 조치<br>
+                    ④ 결과 통보 : 신고인 및 행안부 통보<br>
+                    다) 행정심판에 대한 자세한 사항은 다음의 링크사이트를 참고하시기 바랍니다. -&gt; 국민권익위원회(<a href="http://www.acrc.go.kr/">http://www.acrc.go.kr</a>) -&gt;행정심판상담<br>
+                    <br>
+                    7. 개인정보의 파기절차 및 방법<br>
+                    (1) 본교는 원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체없이 파기합니다. (2) 파기절차 및 방법은 다음과 같습니다.<br>
+                    가) 파기절차<br> 
+                    ① 이용자가 회원가입(본교 지원) 등을 위해 입력하신 정보는 목적이 달성된 후 별도의 DB로 옮겨져(종이의 경우 별도의 서류함) 내부 방침 및 기타 관련 법령에 의한 정보보호 사유에 따라(보유 및 이용기간 참조) 일정 기간 저장된 후 파기되어집니다.<br> 
+                    나) 파기방법<br> 
+                    ① 전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.<br> 
+                    <br>
+                    8. 개인정보관련 의견 수렴 및 불만처리 (1) 본교는 개인정보의 적법성 및 절차의 적정성을 확보하여 홈페이지 사용자의 권익보호 및 공공업무의 적정한 수행 담당자(개인정보보호 책임자 및 관리담당자)를 지정 운영합니다.<br> 
+                    <br>
+                    9. 개인정보 관리 책임자 및 담당자<br> 
+                    (1) 본교는 이용자의 개인정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 아래와 같이 관련 부서 및 개인정보관리책임자를 지정하고 있습니다.<br> 
+                    (2) 홈페이지 이용 중 개인정보의 유출 가능성 등 정보주체의 권익이 침해될 우려가 있는 사실을 발견 또는 기타 불편 사항이 있으신 분은 다음의 연락처로 신고해 주시기 바랍니다<br>
+                    가) 연락처<br> 
+                    ① 전화번호 : 032-560-8120<br>
+                    ② 이 메 일 : dhlim@global-edu.co.kr 사실 조사 : 침해여부 확인, 침해기관 방문 및 서면 조사<br> 
+                    ③ 처리 : 처리 및 조치<br> 
+                    ④ 결과 통보 : 신고인 및 행안부 통보<br> 
+                    <br>		
+                          <table width="100%" border="1" bordercolor="#CCCCCC" cellspacing="0" cellpadding="0">
+                            <tbody><tr align="center">
+                              <td bgcolor="#f2f2f2">구분</td>
+                              <td bgcolor="#f2f2f2">담당자명</td>
+                              <td bgcolor="#f2f2f2" colspan="2">연락처</td>
+                            </tr>
+                            <tr align="center">
+                              <td rowspan="2">개인정보보호 총괄</td>
+                              <td>책임자</td>
+                              <td>교육지원과 부장 신광숙</td>
+                              <td>032)456-8081</td>
+                            </tr>
+                            <tr align="center">
+                              <td>관리자</td>
+                              <td>전산운영과 과장 임동현</td>
+                              <td>032)560-8120</td>
+                            </tr>
+                          </tbody></table>
+                    <br>
+                    나) 행정심판에 대한 자세한 사항은 다음의 링크사이트를 참고하시기 바랍니다. -&gt; 국민권익위원회(<a href="http://www.acrc.go.kr/">http://www.acrc.go.kr</a>) -&gt;행정심판상담<br> 
+                    <br>
+                    10. 기타 개인정보 침해 신고<br> 
+                    (1) 귀하께서는 본교의 서비스를 이용하시며 발생하는 모든 개인정보보호 관련 민원을 개인정보관리책임자 혹은 담당부서로 신고하실 수 있습니다.<br> 
+                    (2) 본교는 이용자들의 신고사항에 대해 신속하게 충분한 답변을 드릴 것입니다.<br> 
+                    (3) 기타 개인정보침해에 대한 신고나 상담이 필요하신 경우에는 아래 기관에 문의하시기 바랍니다.<br> 
+                    가) 개인분쟁조정위원회 (<a href="http://intra.jac.ac.kr/sub/requisition_form/clause/www.1336.or.kr">www.1336.or.kr</a>/1336)<br> 
+                    나) 정보보호마크인증위원회 (<a href="http://intra.jac.ac.kr/sub/requisition_form/clause/www.eprivacy.or.kr">www.eprivacy.or.kr</a>/02-580-0533~4)<br> 
+                    다) 대검찰청 인터넷범죄수사센터 (<a href="http://icic.sppo.go.kr/">http://icic.sppo.go.kr</a>/02-3480-3600)<br> 
+                    라) 경찰청 사이버테러대응센터 (<a href="http://intra.jac.ac.kr/sub/requisition_form/clause/www.ctrc.go.kr">www.ctrc.go.kr</a>/02-392-0330)<br> 
+                    <br>
+                    11. 개인정보보호방침 변경시 고지<br>
+                    (1) 현 개인정보 취급방침의 내용 추가, 삭제 및 수정이 있을 시에는 개정 최소 7일전부터 홈페이지의 '공지사항'을 통해 고지할 것입니다.<br> 
+                    가) 공고일자 : 2009년 3월 2일<br>
+                    나) 시행일자 : 2009년 3월 2일
+                  </div>
+                </div>
+			        </div>
+			
+          </div>
+          <p style="text-align: center; padding: 30px 0;"><input type="checkbox" name="agree" id="">  개인정보처리방침안내 내용에 동의합니다.</p>
+        </form>
+        <div class="grey-box">
+          접수하기 버튼을 누르시면 작성하신 원서가 정상적으로 접수됨을 알려드립니다.
+            <br>구비하신 서류는 담당교수님과의 면접시에 방문하실 때 가지고 오시면 됩니다.
+        </div>
+        <div class="btn-wrap">
+          <a href="#" class="btn point">접수하기</a>
+          <a href="./apply_online.html" class="btn grey">취소하기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+	
+
+
+
+</script>
+
+
+
+    <div id="footer"></div>
+    <script>
+      fetch("./inc/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.querySelector("#footer").innerHTML = html;
+
+          const script = document.createElement("script");
+          document.body.appendChild(script);
+        });
+    </script>
+
+</body>
+<div class="main-visual-tab pc">
+	<div class="auto">
+		<div class="grid-wrap">
+			<div class="grid-menu">
+				<div class="grid">
+					<a href="./apply_online.html"><span><img src="./images/1.png" alt=""></span><p>수강신청</p></a>	
+					<a href="./apply_qna.html"><span><img src="./images/2.png" alt=""></span><p>입학 Q&A</p></a>
+					<a href="./apply_con.html"><span><img src="./images/3.png" alt=""></span><p>간편문의</p></a>
+					<!-- <a href="#" target="_blank"><span><img src="./images/main-visual-tab-icon-04.png" alt=""></span>카톡 상담</a> -->
+				</div>
+				<div class="phone">
+					<p class="num">1899<br>5338</p>
+					<p class="day">09:00~18:00 토·일<br>공휴일 휴무</p>
+				</div>
+			</div>	
+			<a href="#" class="close">
+				<span class="material-symbols-outlined close-icon">close</span>	
+				<span class="material-symbols-outlined open-icon">menu_open</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(".main-visual-tab .close").on("click", function (e) {
+		e.preventDefault();
+  const $gridMenu = $(".main-visual-tab .grid-menu");
+  const $closeIcon = $(this).find(".close-icon");
+  const $openIcon = $(this).find(".open-icon");
+
+  if ($gridMenu.hasClass("slideOut")) {
+    $gridMenu.removeClass("slideOut");
+    $closeIcon.show();
+    $openIcon.hide();
+  } else {
+    $gridMenu.addClass("slideOut");
+    $closeIcon.hide();
+    $openIcon.show();
+  }
+});
+</script>
+
+</html>

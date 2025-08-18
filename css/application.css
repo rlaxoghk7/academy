@@ -1,0 +1,192 @@
+/* 전체 컨테이너(기존과 동일하게 맞춰 사용) */
+.apply-section {
+  max-width: 1280px;
+  margin: 40px auto;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #333;
+  padding: 0 20px;
+}
+
+/* 개인정보 동의 박스 */
+.agree_box {
+  border: 1px solid #e6e6e6;
+  background: #fafafa;
+  padding: 22px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+.agree_title {
+  font-size: 24px;
+  margin: 0 0 12px;
+  font-weight: 700;
+}
+.agree_title .required {
+  color: #ff6a00;
+  margin-left: 8px;
+  font-weight: 700;
+}
+
+/* 스크롤 내용 */
+.agree_txt {
+  margin-bottom: 12px;
+}
+.agree_scroll {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 16px;
+  max-height: 220px; /* 스크롤 높이 조절 */
+  overflow-y: auto;
+  line-height: 1.7;
+  font-size: 13.5px;
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.01);
+}
+
+/* 포커스 시 윤곽선 (접근성) */
+.agree_scroll:focus {
+  outline: 3px solid rgba(92,107,192,0.15);
+  outline-offset: 2px;
+}
+
+/* 커스텀 스크롤바 (Webkit 계열) */
+.agree_scroll::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.agree_scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 6px;
+}
+.agree_scroll::-webkit-scrollbar-thumb {
+  background: #cfcfcf;
+  border-radius: 6px;
+  border: 2px solid #f1f1f1;
+}
+.agree_scroll::-webkit-scrollbar-thumb:hover {
+  background: #b8b8b8;
+}
+
+/* 동의 체크박스 */
+.agree_check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  margin-top: 6px;
+}
+.agree_check input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* (폼 스타일 간단 재사용) */
+.notice_box {
+  background: #fff7e6;
+  border: 1px solid #ffcc80;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.form_group {
+  margin-bottom: 18px;
+}
+.form_group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.required { color: #d32f2f; }
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  font-size: 14px;
+}
+textarea { min-height: 100px; }
+
+.form_btns { margin-top: 12px; display:flex; gap:10px; }
+.btn_submit {
+  background: #5c6bc0; color:#fff; border:none; padding:10px 18px; border-radius:4px; cursor:pointer;
+}
+.btn_cancel { background:#eee; color:#333; border:none; padding:10px 18px; border-radius:4px; cursor:pointer; }
+
+/* 전체 레이아웃 */
+body { font-family: "Noto Sans KR", system-ui, Arial, sans-serif; color:#333; margin:0; padding:20px; background:#fff; }
+.wrap { max-width: 980px; margin: 0 auto; }
+
+/* 공통 */
+.required { color:#d93f00; font-weight:700; }
+
+/* form: 좌우 레이블/입력 구조 (그리드) */
+.form-group {
+  display: grid;
+  grid-template-columns: 180px 1fr; /* 레이블 고정, 컨트롤 가변 */
+  align-items: start;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.form-label {  padding-top:15px; white-space:nowrap; }
+
+/* 입력영역 공통 */
+.form-control select,
+.form-control input[type="text"],
+.form-control input[type="tel"],
+.form-control textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* 이메일 행 */
+.email-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  min-width: 0; /* flexbox 내부에서 input 줄바꿈 방지 */
+}
+.email-input { padding: 10px; border:1px solid #d9d9d9; border-radius:4px; font-size:14px; min-width:0; }
+.email-input.local { width: 40%; }
+.email-input.domain { width: 40%; }
+.email-select { padding: 10px; border:1px solid #d9d9d9; border-radius:4px; background:#fff; }
+.at { color:#666; margin:0 4px; }
+
+/* 라디오 그룹 */
+.radio-group { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+.radio-group label { display:flex; gap:5px; align-items:center; font-size:14px; }
+
+/* textarea */
+textarea { min-height:140px; resize:vertical; }
+
+/* 버튼 */
+.form-actions { display:flex; gap:12px; margin-top:18px; grid-column: 1 / -1; justify-content: center;}
+.submit-btn { background:#5c6bc0; color:#fff; border:none; padding:10px 18px; border-radius:4px; cursor:pointer; }
+.cancel-btn { background:#eee; border:none; padding:10px 18px; border-radius:4px; cursor:pointer; }
+
+input[type="radio"] {
+  top: 1px;
+}
+
+/* 반응형: 폭이 좁으면 레이블 위로 */
+@media (max-width:720px) {
+  .form-group { grid-template-columns: 1fr; }
+  .form-label { margin-bottom:6px; }
+  .form-actions { grid-column: 1 / -1; }
+  .email-input.local, .email-input.domain { width: auto; flex: 1 1 40%; }
+}
+@media(max-width:580px){
+  .agree_title{
+    font-size: 20px;
+  }
+}
+
