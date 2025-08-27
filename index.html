@@ -57,8 +57,10 @@
   <script src="./js/sly.min.js"></script>
 	<script type="text/javascript" src="./js/jquery-ui.min.js"></script>
 	<script src="https://spi.maps.daum.net/imap/map_js_init/postcode.v2.js"></script><script src="/js/DaumPostcode.js"></script>
+	
 
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -89,11 +91,7 @@
 
   <!-- Header -->
   <header id="header" class="header">
-	  <div class="sitemap bg blind">
-      <div class="close">
-        <i class="xi-close"></i>
-      </div>
-    </div>
+	
     <script>
       $(".close").on("click",function(){
       $(".sitemap").addClass("blind");
@@ -123,10 +121,13 @@
 				  	<a href="./process_now.html" class="btn_login">
 				  		<span>현재모집과정보기</span>
 				  	</a> 
+						
 				  </div>
 				</div>
 			</div>
 		</div>
+		
+
     <div class="gnbWrap">
       <div class="flex-wrap auto">
         <h1 class="logo">
@@ -261,6 +262,232 @@
                 </ul>
               </div>
             </li>
+						<li class="site-map">
+		  <button id="sitemapOpenBtn" class="sitemap-btn" aria-haspopup="dialog" aria-controls="sitemapDialog" aria-expanded="false">
+		     Site map<span class="material-symbols-outlined">menu</span>
+		  </button>
+		</li>
+
+<!-- 2) 전체화면 오버레이 -->
+		<div id="sitemapDialog" class="sitemap-overlay" role="dialog" aria-modal="true" aria-labelledby="sitemapTitle" hidden>
+			<div class="sitemap-panel" tabindex="-1">
+				<header class="sitemap-header">
+					<h2 id="sitemapTitle">Site Map</h2>
+					<button id="sitemapCloseBtn" class="sitemap-close" aria-label="Close sitemap">
+						<span class="material-symbols-outlined">close</span>
+					</button>
+				</header>
+
+				<nav class="sitemap-grid" aria-label="전체 메뉴">
+					<!-- 실제 메뉴 트리 넣는 곳 -->
+					<section class="sitemap-col col1">
+						<h3>Main</h3>
+						<ul>
+							<li><a href="./index.html">홈</a></li>
+						</ul>
+					</section>
+
+					<section class="sitemap-col col2">
+						<h3>학교소개</h3>
+						<ul>
+							<li>
+                <a href="./greeting.html">인사말</a>
+              </li>
+              <li>
+                <a href="./vision.html">비전 및 목표</a>
+              </li>
+              <li>
+                <a href="./introduce.html">교직원소개</a>
+              </li>
+              <li>
+                <a href="./orga.html">조직도</a>
+              </li>
+              <li>
+                <a href="./history.html">연혁</a>
+              </li>
+              <li>
+                <a href="./prof.html">시설안내</a>
+              </li>
+              <li>
+                <a href="./location.html">오시는길</a>
+              </li>
+              <li>
+                <a href="./news.html">학교소식</a>
+              </li>
+						</ul>
+					</section>
+
+					<section class="sitemap-col col3">
+						<h3>모집교육</h3>
+						<ul>
+							<li>
+                <a href="./process_now.html">현재모집중인과정</a>
+              </li>
+              <li>
+                <a href="./process_ing.html">진행중인과정</a>
+              </li>
+              <li>
+                <a href="./process_year.html">연간모집과정</a>
+              </li>
+						</ul>
+					</section>
+
+					<section class="sitemap-col col4">
+						<h3>입학신청</h3>
+						<ul>
+							<li>
+                <a href="./apply_online.html">온라인접수</a>
+              </li>
+              <li>
+                <a href="./apply_con.html">입학상담</a>
+              </li>
+              <li>
+                <a href="./apply_qna.html">자주하는 질문</a>
+              </li>
+              <li>
+                <a href="./apply_check.html">접수진행/합격확인</a>
+              </li>
+						</ul>
+					</section>
+
+					<section class="sitemap-col col5">
+						<h3>교육과정</h3>
+						<ul>
+							<li>
+                  <a href="./edu_01.html">3D기계설계</a>
+              </li>
+              <li>
+                <a href="./edu_02.html">3D사출금형설계</a>
+              </li>
+              <li>
+                <a href="./edu_03.html">3D모델링</a>
+              </li>
+              <li>
+                <a href="./edu_04.html">머시닝 센터(CAM)</a>
+              </li>
+						</ul>
+					</section>
+
+					<section class="sitemap-col col6">
+						<h3>취업정보</h3>
+						<ul>
+							<li>
+                <a href="./job_01.html">기업체구인</a>
+              </li>
+              <li>
+                <a href="./job_02.html">인재정보</a>
+              </li>
+              <li>
+                <a href="./job_03.html">수료생 취업현황</a>
+              </li>
+              <li>
+                <a href="./job_04.html">취업자료실</a>
+              </li>
+              <li>
+                <a href="./job_05.html">취업가이드</a>
+              </li>
+						</ul>
+					</section>
+
+					<section class="sitemap-col col7">
+						<h3>커뮤니티</h3>
+						<ul>
+							<li>
+                <a href="./community_01.html">공지사항</a>
+              </li>
+              <li>
+                <a href="./community_02.html">포트폴리오</a>
+              </li>
+              <li>
+                <a href="./community_03.html">갤러리</a>
+              </li>
+							<li>
+                <a href="./community_04.html">온라인교육</a>
+              </li>
+						</ul>
+					</section>
+				</nav>
+
+			
+			</div>
+		</div>
+
+		<script>
+			(function(){
+  const btn     = document.getElementById('sitemapOpenBtn');
+  const overlay = document.getElementById('sitemapDialog');
+  const panel   = overlay.querySelector('.sitemap-panel');
+  const close   = document.getElementById('sitemapCloseBtn');
+
+  let lastFocused = null, lastScrollY = 0;
+
+  function scrollbarWidth(){
+    return window.innerWidth - document.documentElement.clientWidth;
+  }
+
+  function lockScroll(lock){
+    if(lock){
+      // 1) 스크롤바 폭만큼 padding-right 보정(레이아웃 이동 방지)
+      document.documentElement.style.setProperty('--sbw', scrollbarWidth() + 'px');
+      document.body.classList.add('no-scroll');
+      // 2) 현재 스크롤 위치 기억(선택)
+      lastScrollY = window.scrollY || document.documentElement.scrollTop;
+    }else{
+      document.body.classList.remove('no-scroll');
+      document.documentElement.style.removeProperty('--sbw');
+      // 필요하면 복귀
+      window.scrollTo(0, lastScrollY);
+    }
+  }
+
+  function setOriginFromButton(){
+    const r = btn.getBoundingClientRect();
+    const x = r.left + r.width/2;
+    const y = r.top  + r.height/2;
+    overlay.style.setProperty('--sx', x + 'px');
+    overlay.style.setProperty('--sy', y + 'px');
+  }
+
+  function openSitemap(){
+    lastFocused = document.activeElement;
+
+    // 💡 순서 중요: 먼저 스크롤 잠금 → 버튼 좌표 계산 → 열기
+    lockScroll(true);
+    setOriginFromButton();
+
+    overlay.hidden = false;
+    requestAnimationFrame(()=>{
+      overlay.classList.add('is-open');
+      btn.setAttribute('aria-expanded','true');
+      // 포커스 이동으로 인한 화면 점프 방지
+      if (panel && panel.focus) panel.focus({ preventScroll: true });
+    });
+  }
+
+  function closeSitemap(){
+    overlay.classList.remove('is-open');  // clip-path 역재생(수축)
+    btn.setAttribute('aria-expanded','false');
+  }
+
+  // 애니메이션 종료 후에만 hidden 처리 + 스크롤 잠금 해제
+  overlay.addEventListener('transitionend', (e)=>{
+    const isClip = e.propertyName === 'clip-path' || e.propertyName === 'transform';
+    if(isClip && !overlay.classList.contains('is-open')){
+      overlay.hidden = true;
+      lockScroll(false);
+      if(lastFocused) lastFocused.focus();
+    }
+  });
+
+  btn.addEventListener('click', openSitemap);
+  close.addEventListener('click', closeSitemap);
+  overlay.addEventListener('click', (e)=>{ if(e.target === overlay) closeSitemap(); });
+  document.addEventListener('keydown', (e)=>{ if(!overlay.hidden && e.key === 'Escape') closeSitemap(); });
+
+  // 열린 상태에서 리사이즈 시 원점 재계산
+  window.addEventListener('resize', ()=>{ if(!overlay.hidden){ setOriginFromButton(); } });
+})();
+		</script>
           </ul>  
         </nav>
         <div class="utilWrap">
@@ -270,7 +497,7 @@
             <a href="../../html/member/join.php">
               <img src="../../images/layout/member_icon.png" alt="">
             </a> -->
-            <a href="javascript:void(0);" class="btnGnbAll sitemap-btn">
+            <a href="javascript:void(0);" class="btnGnbAll">
               <span></span>
               <span></span>
               <span></span>

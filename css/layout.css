@@ -69,6 +69,105 @@ img{max-width:100%;}
 }
 
 
+/* 사이트맵 */
+
+.sitemap-btn{
+  display:inline-flex; align-items:center; gap:.5rem;
+  padding:.6rem 1rem; border-radius:999px; border:none;
+  background:#fff; cursor:pointer; font-weight:600;
+  
+}
+.sitemap-btn:hover{ background:#f8fafc }
+
+/* --- 오버레이 레이어 --- */
+.sitemap-overlay{
+   position: fixed; inset: 0; z-index: 9999;
+  background: rgba(17,24,39,.55);           /* 딤 */
+  backdrop-filter: blur(6px) saturate(120%);
+  /* 버튼 좌표를 받을 CSS 변수 */
+  --sx: 90vw;  /* safety default */
+  --sy: 10vh;
+
+  /* 버튼 위치를 원점으로 하여 원형 클리핑 */
+  clip-path: circle(0 at var(--sx) var(--sy));
+  transition: clip-path .8s ease-in-out, background .8s ease-in-out;
+  will-change: clip-path;
+  pointer-events: none;                      /* 닫혀 있을 때 클릭 막기 */
+  opacity: 1;
+}
+
+/* 열렸을 때 토글되는 상태 클래스 */
+.sitemap-overlay.is-open{  clip-path: circle(150vmax at var(--sx) var(--sy));
+  pointer-events: auto; }
+
+/* --- 패널 --- */
+.sitemap-panel{
+  width:100%;
+  height:100%;
+  background:url(../images/sitemap.png) no-repeat center / cover;
+	padding: 2% 5%;
+  transform:translateY(10px); transition:transform .25s ease;
+	border-radius: 0px 0px 0px 300px;
+	opacity: 1;
+  transform: translateY(8px) scale(1);
+  transition: opacity .8s ease, transform .8s ease;
+}
+.sitemap-overlay.is-open .sitemap-panel{ transform:translateY(0); }
+
+/* --- 헤더 --- */
+.sitemap-header{
+  display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  border-bottom:1px solid #e5e7eb; padding-bottom:12px; margin-bottom:20px;
+}
+.sitemap-header h2{ font-size:24px; font-weight:800; position: relative; }
+
+.sitemap-close{
+  display:inline-flex; 
+	align-items:center; 
+	justify-content:center;
+  width:48px;
+	height:48px; 
+	outline: none;
+  background:#fff; 
+	cursor:pointer;
+	padding: 0;
+	border: 0;
+}
+.sitemap-close:hover{ background:#f8fafc }
+
+/* --- 그리드 --- */
+.sitemap-grid{
+  display:grid; gap:28px;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+}
+.sitemap-col {margin: 10% 0; text-align: center;}
+
+.sitemap-col h3{
+  font-size:16px; font-weight:800; color:#1f2937; padding-bottom:10%;
+}
+
+.sitemap-col ul{ display:grid; gap:8px; }
+/* .sitemap-col ul::before {content: ''; width: 3px; height: 30px; position: relative; background-color: #476ef3; top: 5%; left: 50%; display: block;} */
+.sitemap-col a{
+  color:#4b5563; text-decoration:none; line-height:1.5;
+}
+.sitemap-col a:hover{ color:#1e40af; text-decoration:underline; }
+
+/* --- 푸터 --- */
+.sitemap-footer{ margin-top:24px; padding-top:16px; border-top:1px solid #e5e7eb; color:#6b7280 }
+
+/* --- 반응형 --- */
+@media (max-width: 1024px){
+  .sitemap-grid{ grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 720px){
+  .sitemap-panel{ padding:18px }
+  .sitemap-grid{ grid-template-columns: repeat(2, 1fr); gap:20px }
+  .sitemap-header h2{ font-size:20px }
+}
+@media (max-width: 440px){
+  .sitemap-grid{ grid-template-columns: 1fr }
+}
 
 /*******************************************************************
 *	m-header
@@ -122,6 +221,8 @@ img{max-width:100%;}
 #gnb .gnbList > li .depth02{text-align: left; margin-top: 0px;  padding:0 20px;}
 #gnb .gnbList > li .depth02 li{align-items: flex-start; }
 #gnb .gnbList > li .depth02 a{padding:8px 0;}
+#gnb .gnbList > li:nth-child(7) {display: none;}
+
 
 #gnb .gnbList > li > a{display:block;height:60px;line-height:60px;background:#fff;border-bottom:1px solid #d9d9d9;padding-left:20px;position:relative;text-align:left;}
 #gnb .gnbList > li > a.on{background:#f37053;color:#fff;}
