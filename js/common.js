@@ -287,7 +287,6 @@ var daram = (function() {
 			//case "process01_intro":							allFix({mainSel:1,lnbSel:1}); break;
 			case "process_ing01":							    allFix({mainSel:1,lnbSel:1}); break;
 			//case "process03":							    allFix({mainSel:1,lnbSel:3}); break;
-			case "process_year01":							    allFix({mainSel:1,lnbSel:2}); break;
 			// case "process05":							    allFix({mainSel:1,lnbSel:3}); break;
 			//case "process06":						        allFix({mainSel:1,lnbSel:6}); break;
 			// case "process07":						        allFix({mainSel:1,lnbSel:4}); break;
